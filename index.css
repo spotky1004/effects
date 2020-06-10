@@ -1,0 +1,48 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Major Mono Display', monospace;
+  user-select: none;
+  transition: all 0.2s;
+}
+body {
+  background-color: black;
+}
+#effSelect {
+  z-index: 1;
+  margin-left: 5%;
+  position: relative;
+  width: 90%;
+  height: 4vh;
+  padding: 1vh 0 0 1vw;
+  background-color: rgba(200, 200, 200, 0.5);
+  border-radius: 0 0 15px 15px;
+}
+#effSelect:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.5s;
+}
+#effSelect > span {
+  width: 8vw; height: 3vh;
+  padding-top: 0.5vh; margin-right: 1vw;
+  display: block; float: left;
+  font-size: 2.5vh; text-align: center;
+  background-color: rgba(200, 200, 200, 0.5);
+  transform: translateX(-5px) translateY(-5px);
+  box-shadow: 5px 5px 3px #444;
+}
+#effSelect > span:hover {
+  transform: translateX(0) translateY(0);
+  box-shadow: 0 0 0 #fff;
+  background-color: rgba(194, 237, 199, 0.5);
+}
+#effectOutput {
+  z-index: 0;
+  width: 100vw; height: 100vh;
+  position: absolute;
+  top: 0; left: 0;
+  background-color: #000;
+}
+.effect1 {
+  background: repeating-linear-gradient(45deg, #444, #444 40px, #888 0, #888 80px);
+}

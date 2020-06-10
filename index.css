@@ -55,3 +55,17 @@ body {
 .effect1 {
   background: repeating-linear-gradient(45deg, #444, #444 40px, #888 0, #888 80px);
 }
+.effect2 {
+  background-image: linear-gradient(90deg, #e0b8b8, #d8e0b8, #b8e0c8, #b8c8e0, #d8b8e0);
+  animation-duration: 3s;
+  animation-name: hueRotateAnimation;
+  animation-iteration-count: infinite;
+}
+@keyframes hueRotateAnimation {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}

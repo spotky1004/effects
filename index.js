@@ -13,10 +13,10 @@ $(function (){
       $('#effSelect > span:eq(' + (num-1) + ')').attr({
         'class' : 'selectedEff'
       });
+      $('#effectOutput').css('background', '');
       $('#effectOutput').attr({
         'class' : 'effect' + effectNow
       });
-      $('#effectOutput').css('background', 'black');
     }
   }
 
@@ -32,6 +32,9 @@ $(function (){
           $('.effect1').css('background', 'repeating-linear-gradient(45deg, #888, #888 ' + ((160*animationProgress)-80) + 'px, #444 0, #444 80px)');
         }
         break;
+      case 2:
+        $('.effect2').css('background-image', 'linear-gradient(' + animationProgress*360 + 'deg, #e0b8b8, #d8e0b8, #b8e0c8, #b8c8e0, #d8b8e0)');
+        break;
     }
 
     if (tickNow >= tickMax) {tickNow = 0;};
@@ -41,5 +44,5 @@ $(function (){
     effect($('#effSelect > span').index(this)+1);
   });
 
-  effect(1);
+  effect(Math.floor(Math.random()*2)+1);
 });

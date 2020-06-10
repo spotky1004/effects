@@ -22,7 +22,7 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
   transition: all 0.5s;
 }
-#effSelect > span {
+#effSelect > span:not(.selectedEff) {
   width: 8vw; height: 3vh;
   padding-top: 0.5vh; margin-right: 1vw;
   display: block; float: left;
@@ -31,7 +31,16 @@ body {
   transform: translateX(-5px) translateY(-5px);
   box-shadow: 5px 5px 3px #444;
 }
-#effSelect > span:hover {
+#effSelect > span:not(.selectedEff):hover {
+  transform: translateX(0) translateY(0);
+  box-shadow: 0 0 0 #fff;
+  background-color: rgba(194, 237, 199, 0.5);
+}
+#effSelect > span.selectedEff {
+  width: 8vw; height: 3vh;
+  padding-top: 0.5vh; margin-right: 1vw;
+  display: block; float: left;
+  font-size: 2.5vh; text-align: center;
   transform: translateX(0) translateY(0);
   box-shadow: 0 0 0 #fff;
   background-color: rgba(194, 237, 199, 0.5);

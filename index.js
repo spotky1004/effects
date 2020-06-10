@@ -1,5 +1,5 @@
 $(function (){
-  effectNow = 1;
+  effectNow = 0;
   tickNow = 0;
   tickMax = 500;
 
@@ -41,5 +41,5 @@ $(function (){
     effect($('#effSelect > span').index(this)+1);
   });
 
-  effect(Math.floor(Math.random()*9)+1);
+  effect(1);
 });

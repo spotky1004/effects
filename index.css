@@ -1,9 +1,9 @@
 * {
-  padding: 0;
-  margin: 0;
+  padding: 0; margin: 0;
   font-family: 'Major Mono Display', monospace;
   user-select: none;
   transition: all 0.2s;
+  overflow: hidden;
 }
 body {
   background-color: black;
@@ -67,5 +67,44 @@ body {
   }
   to {
     filter: hue-rotate(360deg);
+  }
+}
+.effect3 {
+  background-image: linear-gradient(190deg, #074706 20%, #000 25% 75%, #22cf1f 80%);
+}
+.eff3u {
+  width: 1vw; height: 1vw;
+  border: 1.5px solid rgba(7, 71, 6, 0.7); border-radius: 1.5px;
+  position: absolute;
+  animation: boxRotate linear 2s infinite normal, eff3uPulse ease 1s infinite normal;
+}
+.eff3d {
+  width: 1vw; height: 1vw;
+  border: 1.5px solid rgba(34, 207, 31, 0.7); border-radius: 1.5px;
+  position: absolute;
+  animation: boxRotate linear 1.3s infinite normal, eff3dPulse ease 1s infinite normal;
+}
+@keyframes boxRotate {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes eff3uPulse {
+  from {
+    background-color: rgba(7, 71, 6, 0.6);
+  }
+  to {
+    background-color: rgba(7, 71, 6, 0);
+  }
+}
+@keyframes eff3dPulse {
+  from {
+    background-color: rgba(34, 207, 31, 0.6);
+  }
+  to {
+    background-color: rgba(34, 207, 31, 0);
   }
 }

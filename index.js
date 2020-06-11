@@ -52,14 +52,14 @@ $(function (){
         $('.effect2').css('background-image', 'linear-gradient(' + animationProgress*360 + 'deg, #e0b8b8, #d8e0b8, #b8e0c8, #b8c8e0, #d8b8e0)');
         break;
       case 3:
-        if (Math.random() < 0.01) {
+        if (Math.random() < 0.015) {
           boxUIndexNums.push(indexNum[0]);
           boxUyAxis.push(110);
           $('<div class=eff3u>').addClass('eff3u' + Number(indexNum[0])).appendTo('#effectOutput');
           $('.eff3u' + Number(indexNum[0])).css('left', (Math.random()*100 + 'vw'));
           indexNum[0]++;
         }
-        if (Math.random() < 0.01) {
+        if (Math.random() < 0.015) {
           boxDIndexNums.push(indexNum[1]);
           boxDyAxis.push(110);
           $('<div class=eff3d>').addClass('eff3d' + Number(indexNum[1])).appendTo('#effectOutput');
@@ -70,7 +70,7 @@ $(function (){
           boxUyAxis[i] -= animationSpeed*25;
           $('.eff3u' + boxUIndexNums[i]).css('bottom', (boxUyAxis[i] + 'vh'));
           $('.eff3u' + boxUIndexNums[i]).css('opacity', Math.min((boxUyAxis[i]-50)/60, 1));
-          if (boxUyAxis[i] < 60) {
+          if (boxUyAxis[i] < 50) {
             $('.eff3u' + boxUIndexNums[i]).remove();
             boxUIndexNums.splice(i, 1);
             boxUyAxis.splice(i, 1);
@@ -80,7 +80,7 @@ $(function (){
           boxDyAxis[i] -= animationSpeed*25;
           $('.eff3d' + boxDIndexNums[i]).css('top', (boxDyAxis[i] + 'vh'));
           $('.eff3d' + boxDIndexNums[i]).css('opacity', Math.min((boxDyAxis[i]-50)/60, 1));
-          if (boxDyAxis[i] < 60) {
+          if (boxDyAxis[i] < 50) {
             $('.eff3d' + boxDIndexNums[i]).remove();
             boxDIndexNums.splice(i, 1);
             boxDyAxis.splice(i, 1);

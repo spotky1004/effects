@@ -96,6 +96,5 @@ $(function (){
     effect($('#effSelect > span').index(this)+1);
   });
 
-  effect(Math.floor(Math.random()*2)+1);
-  effect(3);
+  effect(Math.floor(Math.random()*3)+1);
 });

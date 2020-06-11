@@ -29,11 +29,13 @@ body {
   background-color: rgba(200, 200, 200, 0.5);
   transform: translateX(-5px) translateY(-5px);
   box-shadow: 5px 5px 3px #444;
+  transition: all 0.2s;
 }
 #effSelect > span:not(.selectedEff):hover {
   transform: translateX(0) translateY(0);
   box-shadow: 0 0 0 #fff;
   background-color: rgba(194, 237, 199, 0.5);
+  transition: all 0.2s;
 }
 #effSelect > span.selectedEff {
   width: 8vw; height: 3vh;
